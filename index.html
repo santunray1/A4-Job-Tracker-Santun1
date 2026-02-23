@@ -24,209 +24,211 @@
 
 
 </head>
-<body class="bg-gray-50">
-    <section class="w-[80%] mx-auto">
-        <div class="pt-[60px]">
-            <h1 class="text-[#002C5C] font-bold text-[32px]">Job Application Tracker</h1>
-        </div>
-        <div class="flex gap-4 pt-5">
-            <div class="w-[500px] h-[97px] bg-white p-[20px] rounded-md border-2 border-gray-200">
-                <p class="text-md ">Total</p>
-                <p class="text-2xl font-bold">8</p>
+    <body class="bg-gray-50">
+        <section class="w-[80%] mx-auto">
+            <div class="pt-[60px]">
+                <h1 class="text-[#002C5C] font-bold text-[32px]">Job Application Tracker</h1>
             </div>
-            <div class="w-[500px] h-[97px] bg-white p-[20px] rounded-md border-2 border-gray-200">
-                <p class="text-md ">Interview</p>
-                <p class="text-2xl font-bold">0</p>
+            <div class="flex gap-4 pt-5">
+                <div class="tracer-box w-[500px] h-[97px] bg-white p-[20px] rounded-md border-2 border-gray-200">
+                    <p class="text-md ">Total</p>
+                    <p id="total" class="text-2xl font-bold">0</p>
+                </div>
+                <div class="tracer-box w-[500px] h-[97px] bg-white p-[20px] rounded-md border-2 border-gray-200">
+                    <p class="text-md ">Interview</p>
+                    <p id="interviewCount" class="text-2xl font-bold text-green-500">0</p>
+                </div>
+                <div class="tracer-box w-[500px] h-[97px] bg-white p-[20px] rounded-md border-2 border-gray-200">
+                    <p class="text-md ">Rejected</p>
+                    <p id="rejectedCount" class="text-2xl font-bold text-red-500">0</p>
+                </div>
             </div>
-            <div class="w-[500px] h-[97px] bg-white p-[20px] rounded-md border-2 border-gray-200">
-                <p class="text-md ">Rejected</p>
-                <p class="text-2xl font-bold">0</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <hr class="w-[80%] mx-auto my-5 ">
+        <hr class="w-[80%] mx-auto my-5 ">
 
-    <section class="w-[80%] mx-auto">
-        <div class="flex justify-between">
-            <p class="text-[#002C5C] text-2xl font-bold ">Available Jobs</p>
-            <div class="flex gap-3 my-5">
-                <p class="text-[#64748B]">8</p>
-                <p class="text-[#64748B]">Jobs</p>
-            </div>
-        </div>
-    </section>
-        <main class="w-[80%] mx-auto">
-            <section>
-                <div class="">
-                <button id="btn-top" class="w-[100px] h-[50px]  bg-blue-700 text-white p-[2px] rounded-md border-1 border-gray-200 cursor-                 pointer">All</button>
-                <button id="btn-top" class="w-[100px] h-[50px]  bg-white p-[2px] rounded-md border-1 border-gray-200 cursor-                        pointer">Interview</button>
-                <button id="btn-top" class="w-[100px] h-[50px]  bg-white p-[2px] rounded-md border-1 border-gray-200 cursor-                        pointer">Rejected</button>
-        </div>
+        <main>
+            <section class="w-[80%] mx-auto">
+                <div class="flex justify-between">
+                        <p class="text-[#002C5C] text-2xl font-bold ">Available Jobs</p>
+                    <div class="flex gap-3 my-5">
+                        <p class="text-[#64748B]">8</p>
+                        <p class="text-[#64748B]">Jobs</p>
+                    </div>
+                </div>
+            </section>
+            <section class="w-[80%] mx-auto">
+                <div class="flex gap-4">
+                    <button id="btn-top" class="w-[100px] h-[50px]  bg-blue-700 text-white p-[2px] rounded-md border-1 border-gray-200 cursor-pointer">All</button>
+                    <button id="btn-top" class="w-[100px] h-[50px]  bg-white p-[2px] rounded-md border-1 border-gray-200 cursor-pointer">Interview</button>
+                    <button id="btn-top" class="w-[100px] h-[50px]  bg-white p-[2px] rounded-md border-1 border-gray-200 cursor-pointer">Rejected</button>
+                </div>
+            </section>
+
+            <section id="allCards" class="w-[80%] mx-auto my-5">
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                    <div class="flex justify-between ">
+                        <div class="space-y-5">
+                            <p class="text-[#002C5C] text-2xl font-bold ">Mobile First Corp</p>
+                            <p class="text-[#64748B]">React Native Developer</p>
+                        </div>
+                        <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer ">
+                            <i class="fa-regular fa-trash-can p-4"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-5">
+                        <p class="text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <div>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                    <div class="flex justify-between ">
+                        <div class="space-y-5">
+                            <p class="text-[#002C5C] text-2xl font-bold ">WebFlow Agency</p>
+                            <p class="text-[#64748B]">Web Designer & Developer</p>
+                        </div>
+                        <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer">
+                            <i class="fa-regular fa-trash-can p-4"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-5">
+                        <p class="text-[#64748B]">Los Angeles, CA• Part-time • $80,000 - $120,000</p>
+                        <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                        <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <div>
+                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                    </div>
+                </div>
+                </div>
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                        <div class="flex justify-between ">
+                            <div class="space-y-5">
+                                <p class="text-[#002C5C] text-2xl font-bold ">DataViz Solutions</p>
+                                <p class="text-[#64748B]">Data Visualization Specialist</p>
+                            </div>
+                            <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer">
+                                <i class="fa-regular fa-trash-can p-4"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-5">
+                            <p class="text-[#64748B]">Bostom, MA • Full-time • $125,000 - $165,000</p>
+                            <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                            <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                        <div>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                        <div class="flex justify-between ">
+                            <div class="space-y-5">
+                                <p class="text-[#002C5C] text-2xl font-bold ">CloudFirst Inc</p>
+                                <p class="text-[#64748B]">Backend Developer</p>
+                            </div>
+                            <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer">
+                                <i class="fa-regular fa-trash-can p-4"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-5">
+                            <p class="text-[#64748B]">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                            <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                            <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                        <div>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                    <div class="flex justify-between ">
+                        <div class="space-y-5">
+                            <p class="text-[#002C5C] text-2xl font-bold ">Innovation Labs</p>
+                             <p class="text-[#64748B]">UI/UX Engineer</p>
+                        </div>
+                        <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer">
+                            <i class="fa-regular fa-trash-can p-4"></i>
+                        </div>
+                        </div>
+                            <div class="space-y-5">
+                            <p class="text-[#64748B]">Austin, Tx • Full-time • $110,000 - $150,000</p>
+                            <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                            <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                        <div>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                <div class="flex justify-between ">
+                    <div class="space-y-5">
+                        <p class="text-[#002C5C] text-2xl font-bold ">MegaCorp Solutions</p>
+                        <p class="text-[#64748B]">JavaScript Developer</p>
+                    </div>
+                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer">
+                        <i class="fa-regular fa-trash-can p-4"></i>
+                   </div>
+                </div>
+                <div class="space-y-5">
+                    <p class="text-[#64748B]">New York, NY • Full-time • $130,000 - $170,000</p>
+                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                    <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <div>
+                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                    </div>
+                </div>
+                </div>
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                    <div class="flex justify-between ">
+                        <div class="space-y-5">
+                            <p class="text-[#002C5C] text-2xl font-bold ">StartupXYZ</p>
+                            <p class="text-[#64748B]">Full Stack Engineer</p>
+                        </div>
+                        <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer">
+                            <i class="fa-regular fa-trash-can p-4"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-5">
+                        <p class="text-[#64748B]">Remote • Full-time • $120,000 - $160,000</p>
+                        <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                        <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                        <div>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%] bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
+                    <div class="flex justify-between ">
+                        <div class="space-y-5">
+                            <p class="text-[#002C5C] text-2xl font-bold ">TechCorp Industries</p>
+                            <p class="text-[#64748B]">Senior Frontend Developer</p>
+                        </div>
+                        <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 cursor-pointer">
+                            <i class="fa-regular fa-trash-can p-4"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-5">
+                        <p class="text-[#64748B]">San Frencisco, CA • Full-time • $130,000 - $175,000</p>
+                        <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
+                        <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                        <div>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-pointer">Interview</button>
+                            <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-pointer">Rejected</button>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
-        <main class="w-[80%] mx-auto my-5 ">
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-            <section class="w-[100%] h-[320px]  bg-white p-[24px] rounded-md border-1 border-gray-200 space-y-5 mb-5">
-                <div class="flex justify-between ">
-                    <div class="space-y-5">
-                        <p>Mobile First Corp</p>
-                        <p>React Native Developer</p>
-                    </div>
-                   <div class="w-[50px] h-[50px]  bg-white rounded-full border-1 border-gray-200 items-center">
-                        <i class="fa-regular fa-trash-can"></i>
-                   </div>
-                </div>
-                <div class="space-y-5">
-                    <p>Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="w-[113px] h-[36px] bg-slate-200 p-[2px] rounded-md border-1 border-gray-200">Not Applied</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-green-500 font-bold bg-white p-[2px] rounded-md border-1 border-green-300 cursor-                        pointer">Interview</button>
-                        <button id="btn-top" class="w-[100px] h-[36px] text-red-500 font-bold bg-white p-[2px] rounded-md border-1 border-red-300 cursor-                               pointer">Rejected</button>
-                    </div>
-                </div>
-            </section>
-        </main>
-</body>
+        <script src="./script.js"></script>
+    </body>
 </html>

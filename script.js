@@ -1,4 +1,12 @@
+let total = document.getElementById('total');
+let interviewCount = document.getElementById('interviewCount');
+let rejectedCount = document.getElementById('rejectedCount');
+// console.log(rejectedCount);
 
-const buttonClick = document.getElementById(btn-top)
-for{`
-    bg-red`}
+const allCardsSection = document.getElementById('allCards');
+// console.log(allCardsSection.children.length);
+
+function calculateCount(){
+    total.innerText =allCardsSection.children.length
+}
+calculateCount()
